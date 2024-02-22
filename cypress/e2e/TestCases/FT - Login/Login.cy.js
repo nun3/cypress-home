@@ -1,13 +1,17 @@
 /// <reference types="Cypress" />
 
-import { LoginElementsMap } from "../../../../PageObjects/SC - Login/ElementsMap/LoginElementsMap"
+import { LoginAction } from "../../../../PageObjects/SC - Login/Actions/LoginAction"
 
-const LoginMap = new LoginElementsMap
+const LoginAct = new LoginAction
 
 describe('template spec', () => {
     it('passes', () => {
       cy.visit('https://agenda-lista-de-contatos.vercel.app/')
-      LoginMap.ExistCampoNome()
-      LoginMap.PreencheNome()
+
+      LoginAct.ExistCampoNome()
+      LoginAct.PreencheNome('Nune')
+      LoginAct.PreencheFone('41991526177')
+      LoginAct.ClickBtnCadastrar()
+      
     })
   })
