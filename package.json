@@ -1,0 +1,14 @@
+{
+  "name": "cypress-home",
+  "version": "2.0.0",
+  "description": "cypress-home",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress"
+  },
+  "author": "nune",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.6.5"
+  }
+}
