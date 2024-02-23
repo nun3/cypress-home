@@ -9,6 +9,10 @@
   "author": "nune",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.5"
-  }
+    "cypress": "^13.6.5",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true, 
+    "step_definitions": "cypress/e2e/TestCases" }
 }

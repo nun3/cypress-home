@@ -23,4 +23,10 @@ export class LoginAction {
         .click()
         return
     }
+    ValidaCadastroAtualizado(){
+        cy.get(loginElement.LoginPageLocators.valueName)
+        .should('be.visible')
+        .contains('Nune')
+        return
+    }
 }

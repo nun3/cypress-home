@@ -2,6 +2,7 @@
     "LoginPageLocators": {
         "name":"#nome",
         "telefone":"#telefone",
-        "BtnCadastrar":"button"
+        "BtnCadastrar":"button",
+        "valueName": "tbody > tr > :nth-child(1)"
     }
 }
