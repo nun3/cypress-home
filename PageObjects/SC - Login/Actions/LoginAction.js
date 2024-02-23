@@ -27,6 +27,10 @@ export class LoginAction {
         cy.get(loginElement.LoginPageLocators.valueName)
         .should('be.visible')
         .contains('Nune')
+
+        cy.get(loginElement.LoginPageLocators.valueFone)
+        .should('be.visible')
+        .contains('41991526177')
         return
     }
 }
