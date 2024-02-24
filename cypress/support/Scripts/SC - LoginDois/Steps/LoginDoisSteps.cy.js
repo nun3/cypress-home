@@ -1,11 +1,11 @@
 /// <reference types="Cypress" />
 
-import { LoginDoisAction } from "../../../../PageObjects/SC - LoginDois/Actions/LoginDoisAction"
+import { LoginDoisAction } from "../../../../support/Scripts/SC - LoginDois/Actions/LoginDoisAction"
 
 const LoginDoisAct = new LoginDoisAction
 
-describe('template spec', () => {
-    it('passes', () => {
+describe('Cadastra segundo usuário', () => {
+    it('Cadastra Usuário', () => {
       cy.visit('https://agenda-lista-de-contatos.vercel.app/')
 
       LoginDoisAct.ExistCampoNome()
