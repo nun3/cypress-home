@@ -22,6 +22,16 @@ export class LoginDoisAction {
     ClickBtnCadastrar(){
         cy.get(LoginDoisElement.LoginPageLocators.BtnCadastrar)
         .click()
+    }
 
+    ValidaCadastroAtualizado(){
+        cy.get(loginElement.LoginPageLocators.valueName)
+        .should('be.visible')
+        .contains('Nune')
+
+        cy.get(loginElement.LoginPageLocators.valueFone)
+        .should('be.visible')
+        .contains('41991526177')
+        return
     }
 }
