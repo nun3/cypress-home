@@ -16,3 +16,10 @@ module.exports = defineConfig({
     baseUrl: "https://agenda-lista-de-contatos.vercel.app/" //AQUI
   },
 });
+
+LInks:
+https://github.com/marketplace/actions/cypress-io#end-to-end-testing - cypress-io/github-action
+
+executado
+npm install --save-dev @testing-library/cypress
+import '@testing-library/cypress/add-commands'
