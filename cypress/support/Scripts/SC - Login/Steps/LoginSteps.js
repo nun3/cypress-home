@@ -4,9 +4,10 @@ import { LoginAction } from "../Actions/LoginAction"
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 
 const LoginAct = new LoginAction
+const url = Cypress.config("baseUrl")
 
 Given(`que acessei a url padrão`, () => {
-    cy.visit('https://agenda-lista-de-contatos.vercel.app/')
+    cy.visit(url)
 });
 
 Given(`preenchi o Nome`, () => {
