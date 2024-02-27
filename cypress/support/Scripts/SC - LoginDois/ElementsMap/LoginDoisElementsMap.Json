@@ -1,7 +1,0 @@
-{
-    "LoginPageLocators": {
-        "name":"#nome",
-        "telefone":"#telefone",
-        "BtnCadastrar":"button"
-    }
-}
