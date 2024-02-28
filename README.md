@@ -23,3 +23,6 @@ https://github.com/marketplace/actions/cypress-io#end-to-end-testing - cypress-i
 executado
 npm install --save-dev @testing-library/cypress
 import '@testing-library/cypress/add-commands'
+
+Sempre que for mudar de branch precisa lembrar que as configurações das extensões não vão ser alteradas!
+um caso é um plugin adicionado a configuração
