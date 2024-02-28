@@ -6,31 +6,26 @@ export class LoginAction {
     ExistCampoNome(){
         cy.get(loginElement.LoginPageLocators.name)
         .should('be.visible')
-        return
     }
-    PreencheNome(PreencheNome){
+    PreencheNome(namecontext){
         cy.get(loginElement.LoginPageLocators.name)
-        .type(PreencheNome)
-        return
+        .type(namecontext)
     }
-    PreencheFone(PreencheFone){
+    PreencheFone(fonecontext){
         cy.get(loginElement.LoginPageLocators.telefone)
-        .type(PreencheFone)
-        return
+        .type(fonecontext)
     }
     ClickBtnCadastrar(){
         cy.get(loginElement.LoginPageLocators.BtnCadastrar)
         .click()
-        return
     }
-    ValidaCadastroAtualizado(){
+    ValidaCadastroAtualizado(contextname, contextfone){
         cy.get(loginElement.LoginPageLocators.valueName)
         .should('be.visible')
-        .contains('Nune')
+        .contains(contextname)
 
         cy.get(loginElement.LoginPageLocators.valueFone)
         .should('be.visible')
-        .contains('41991526177')
-        return
+        .contains(contextfone)
     }
 }
