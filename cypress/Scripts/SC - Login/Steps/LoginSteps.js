@@ -10,6 +10,7 @@ Given(`que acessei a url padrão`, () => {
     cy.visit(url)
 });
 
+
 Given(`preenchi o Nome {string}`, (valueName) => {
     LoginAct.ExistCampoNome()
     LoginAct.PreencheNome(valueName)
