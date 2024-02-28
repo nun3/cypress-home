@@ -8,6 +8,7 @@ module.exports = defineConfig({
       on('file:preprocessor', cucumber())
     },
     specPattern: "cypress/e2e/**/*.feature",
-    baseUrl: "https://agenda-lista-de-contatos.vercel.app/"
+    baseUrl: "https://agenda-lista-de-contatos.vercel.app/",
+    defaultCommandTimeout: 10000,
   },
 });

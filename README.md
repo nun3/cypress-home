@@ -26,3 +26,5 @@ import '@testing-library/cypress/add-commands'
 
 Sempre que for mudar de branch precisa lembrar que as configurações das extensões não vão ser alteradas!
 um caso é um plugin adicionado a configuração
+
+defaultCommandTimeout: 10000, : Esta linha define o tempo limite padrão (timeout) para os comandos do Cypress em milisegundos.
