@@ -31,3 +31,9 @@ defaultCommandTimeout: 10000, : Esta linha define o tempo limite padrão (timeou
 
 Config do vscode » Editor › Guides: Bracket Pairs
 Controls whether bracket pair guides are enabled or not. (true)
+
+configurar npm scripts no explorer, se não estiver visivel só habilitar nos tres pontinhos...
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "Cypress run"
+  },
