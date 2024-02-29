@@ -1,4 +1,6 @@
 const cucumber = require('cypress-cucumber-preprocessor').default 
+const { addCucumberPreprocessorPlugin } = require("@badeball/cypress-cucumber-preprocessor");
+
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({

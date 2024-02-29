@@ -28,4 +28,16 @@ export class LoginAction {
         .should('be.visible')
         .contains(contextfone)
     }
+    PreencheDadosCompletos(table){
+        table.hashes().forEach(row => {
+        
+            cy.get(loginElement.LoginPageLocators.name)
+            .type(row.nome)
+
+            cy.get(loginElement.LoginPageLocators.telefone)
+            .type(row.fone)
+    
+        });
+
+    }
 }
