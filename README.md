@@ -28,3 +28,6 @@ Sempre que for mudar de branch precisa lembrar que as configurações das extens
 um caso é um plugin adicionado a configuração
 
 defaultCommandTimeout: 10000, : Esta linha define o tempo limite padrão (timeout) para os comandos do Cypress em milisegundos.
+
+Config do vscode » Editor › Guides: Bracket Pairs
+Controls whether bracket pair guides are enabled or not. (true)
