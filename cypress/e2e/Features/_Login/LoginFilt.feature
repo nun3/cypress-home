@@ -1,5 +1,6 @@
 # language: pt
 
+@login
 Funcionalidade: Tela de Login Filt
 
   Cenário: Login Filt
