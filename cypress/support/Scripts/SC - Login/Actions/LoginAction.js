@@ -36,6 +36,9 @@ export class LoginAction {
 
             cy.get(loginElement.LoginPageLocators.telefone)
             .type(row.fone)
+
+            cy.get(loginElement.LoginPageLocators.BtnCadastrar)
+            .click()
     
         });
 

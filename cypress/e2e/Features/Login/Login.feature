@@ -40,6 +40,15 @@ Funcionalidade: Tela de Cadastro dois
     E  preenchi todos os campos do formulário
       | nome   | fone        |
       | Orivan | 41991526177 |
-    Quando clico no botão Cadastrar
+      | teste  | 123         |
+      | teste  | 123         |
+      | teste  | 123         |
+      | teste  | 123         |
+      | teste  | 123         |
+      | teste  | 123         |
+      | teste  | 123         |
+      | teste  | 123         |
+      | teste  | 123         |
+      | teste  | 123         |
     Então atualizo os dados cadastrais com o nome 'Orivan' e telefone '41991526177'
 
