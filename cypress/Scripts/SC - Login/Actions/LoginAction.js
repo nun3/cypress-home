@@ -2,30 +2,27 @@ const loginElement = require('../ElementsMap/LoginElementsMap.json')
 export class LoginAction { 
 
     //outra forma de declarar os elementos » name = "#nome"
+    PreencheCPF(cpfcontext){
+        cy.get(loginElement.LoginPageLocators.LoginForm)
+          .find('input[placeholder="Informe seu CPF"]')
+          .should('be.visible')
+          .focus()
+          .type(cpfcontext);
+    }
+    PreenchePass(passcontext){
 
-    ExistCampoNome(){
-        cy.get(loginElement.LoginPageLocators.name)
+        cy.get(loginElement.LoginPageLocators.LoginForm)
+        .find('input[placeholder="Informe sua senha"]')
         .should('be.visible')
+        .focus()
+        .type(passcontext);
     }
-    PreencheNome(namecontext){
-        cy.get(loginElement.LoginPageLocators.name)
-        .type(namecontext)
+    Submit(){
+        cy.get(loginElement.LoginPageLocators.LoginForm)
+        .submit();
     }
-    PreencheFone(fonecontext){
-        cy.get(loginElement.LoginPageLocators.telefone)
-        .type(fonecontext)
-    }
-    ClickBtnCadastrar(){
-        cy.get(loginElement.LoginPageLocators.BtnCadastrar)
-        .click()
-    }
-    ValidaCadastroAtualizado(contextname, contextfone){
-        cy.get(loginElement.LoginPageLocators.valueName)
-        .should('be.visible')
-        .contains(contextname)
-
-        cy.get(loginElement.LoginPageLocators.valueFone)
-        .should('be.visible')
-        .contains(contextfone)
+    ValidaPagelogin(){
+        cy.get(loginElement.LoginPageLocators.PageAct)
+        .should('be.visible');
     }
 }

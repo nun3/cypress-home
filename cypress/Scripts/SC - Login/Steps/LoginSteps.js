@@ -6,24 +6,22 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 const LoginAct = new LoginAction
 const url = Cypress.config("baseUrl")
 
-Given(`que acessei a url padrão`, () => {
+Given(`que acessei a página de login Filt`, () => {
     cy.visit(url)
 });
 
-
-Given(`preenchi o Nome {string}`, (valueName) => {
-    LoginAct.ExistCampoNome()
-    LoginAct.PreencheNome(valueName)
+Given(`digito o CPF {string}`, (valueCPF) => {
+    LoginAct.PreencheCPF(valueCPF)
 });
 
-Given(`preenchi o Telefone {string}`, (valuefone) => {
-    LoginAct.PreencheFone(valuefone)
+Given(`digito a senha {string}`, (valuepass) => {
+    LoginAct.PreenchePass(valuepass)
 });
 
-When(`clico no botão Cadastrar`, () => {
-    LoginAct.ClickBtnCadastrar()
+When(`eu clico no botão de submit`, () => {
+    LoginAct.Submit()
 });
 
-Then(`atualizo os dados cadastrais com o nome {string} e telefone {string}`, (valueName, valueFone) => {
-    LoginAct.ValidaCadastroAtualizado(valueName, valueFone)
+Then(`eu devo ver a página principal`, () => {
+    LoginAct.ValidaPagelogin()
 });

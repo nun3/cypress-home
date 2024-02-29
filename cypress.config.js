@@ -8,6 +8,6 @@ module.exports = defineConfig({
       on('file:preprocessor', cucumber())
     },
     specPattern: "cypress/e2e/**/*.feature",
-    baseUrl: "https://agenda-lista-de-contatos.vercel.app/"
+    baseUrl: "https://erp-homologacao.viasoft.com.br/pt/login"
   },
 });
