@@ -3,6 +3,6 @@ import { Menu } from './LetMenuAction';
 
 const Actmenu = new Menu
 
-When(`clico no item de menu {string}`, (menu) => {
+When(`que cliquei no item de menu {string}`, (menu) => {
     Actmenu.SetMenu(menu)
 });
