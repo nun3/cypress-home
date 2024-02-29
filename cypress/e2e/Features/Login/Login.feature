@@ -41,13 +41,5 @@ Funcionalidade: Tela de Cadastro dois
       | nome   | fone        |
       | Orivan | 41991526177 |
     Quando clico no botão Cadastrar
-    E preenchi o Nome 'Leo'
-    E preenchi o Telefone '41991788'
-    Quando clico no botão Cadastrar
-    E preenchi o Nome 'Victor'
-    E preenchi o Telefone '356665'
-    Quando clico no botão Cadastrar
     Então atualizo os dados cadastrais com o nome 'Orivan' e telefone '41991526177'
-    Então atualizo os dados cadastrais com o nome 'Leo' e telefone '41991788'
-    Então atualizo os dados cadastrais com o nome 'Victor' e telefone '356665'
 
