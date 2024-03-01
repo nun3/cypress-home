@@ -26,9 +26,8 @@
 import '@testing-library/cypress/add-commands'
 
 Cypress.Commands.add('clickMenu', (menu) => {
-    const mainMenuItem = cy.get('.itens-menu-principal')
+    const mainMenuItem = cy.get('.menus-sidenav').find('.itens-menu-principal')
     .contains(menu).click();
-    //const mainMenuItem = cy.xpath('div[@class="itens-menu-principal"]span[text()="Cadastros"]').click();
 });
 
 Cypress.Commands.add('loginViaApi', (userType, options = {}) => {
