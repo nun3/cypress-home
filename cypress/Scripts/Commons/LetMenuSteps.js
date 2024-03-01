@@ -21,10 +21,5 @@ cy.wait(1000);
     cy.get('app-salvar > .btn').click()
 
     cy.get('.p-toast-message-content').contains('Salvo com sucesso',{timeout:2000})
-    
-
-    
-
-
   
 });
