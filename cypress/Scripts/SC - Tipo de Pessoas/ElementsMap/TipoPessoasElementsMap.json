@@ -1,0 +1,8 @@
+{
+    "TipoPessoaLocators": {
+        "BtnObj":"button",
+        "Descricaofield":"#descricao",
+        "status":".p-toast-message-content"
+        
+    }
+}

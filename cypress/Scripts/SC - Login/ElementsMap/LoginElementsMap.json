@@ -1,9 +1,6 @@
 {
     "LoginPageLocators": {
-        "name":"#nome",
-        "telefone":"#telefone",
-        "BtnCadastrar":"button",
-        "valueName": "tbody > tr > :nth-child(1)",
-        "valueFone": "tbody > tr > :nth-child(2)"
+        "LoginForm":".login-form",
+        "PageAct" : "#main"
     }
 }

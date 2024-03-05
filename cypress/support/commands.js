@@ -25,3 +25,18 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import '@testing-library/cypress/add-commands'
 
+Cypress.Commands.add('clickMenu', (menu) => {
+    cy.get('.itens-menu-principal').contains(menu).trigger('mouseover');
+    cy.wait(500); 
+    cy.get('.background-sidenav > .menus-sidenav > ul').contains(menu)
+    .trigger('mouseover')
+    .click();
+    cy.wait(1000);   
+  });
+  
+  Cypress.Commands.add('clickSubMenu', (submenu) => {
+    cy.get('li').contains(submenu)
+    .click();
+    cy.wait(500); 
+  });
+  
