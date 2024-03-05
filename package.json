@@ -17,6 +17,6 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
-    "step_definitions": "cypress/support/Scripts/**/**"
+    "step_definitions": "cypress/Scripts/**"
   }
 }
