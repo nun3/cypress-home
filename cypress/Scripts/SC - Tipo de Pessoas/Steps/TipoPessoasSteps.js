@@ -26,3 +26,7 @@ When(`aguardo o status {string}`, (status) => {
 Then(`o Cadastro de Tipo de Pessoa Simples deve ser salva com os seguintes dados:`, (table) => {
     TipoPessoaAct.ValidaCadastroAtualizado(table)
 });
+
+Then(`eu filtro o id  do registro gerado e vejo as informações da linha na grid`, () => {
+    TipoPessoaAct.ValidaGrid()
+});

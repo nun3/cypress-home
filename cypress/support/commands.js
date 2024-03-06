@@ -24,6 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import '@testing-library/cypress/add-commands'
+const VariavelTemp = require('../Scripts/Commons/Temp.json')
 
 Cypress.Commands.add('clickMenu', (menu) => {
     cy.get('.itens-menu-principal').contains(menu).trigger('mouseover');
@@ -45,13 +46,14 @@ Cypress.Commands.add('clickMenu', (menu) => {
       cy.get(MapId)
       .should('be.visible')
       .then($element => {
-      const elementoValue = $element.text();
+      let CONTEXTO_ID = $element.text();
+      VariavelTemp.variavelTemporaria.push(CONTEXTO_ID)
         if (row[ColunaId]  === 'Generator') {
-          row[ColunaId]  = elementoValue;
+          row[ColunaId]  = CONTEXTO_ID;
         }
-          return expect(elementoValue).to.equal(row[ColunaId]);
+          return expect(CONTEXTO_ID).to.equal(row[ColunaId]);
       });
-  
+      
     });
   });
 

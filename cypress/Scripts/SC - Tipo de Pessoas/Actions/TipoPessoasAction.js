@@ -1,4 +1,5 @@
 const TipoPessoaElement = require('../ElementsMap/TipoPessoasElementsMap.json')
+const contexto_id = require('../../Commons/Temp.json')
 
 export class TipoPessoaAction {
   
@@ -22,6 +23,13 @@ export class TipoPessoaAction {
     let Id = 'Id', Descricao = 'Descricao';
     cy.ValidaId(table,TipoPessoaElement.TipoPessoaLocators.IdPessoa,Id)
     cy.ValidaFields(table,TipoPessoaElement.TipoPessoaLocators.Descricaofield,Descricao)
+  }
+  ValidaGrid() {
+    cy.wait(1500);
+    cy.get('app-voltar').find('button.btn.btn-voltar').click();
+    cy.get('button[data-title="Filtrar"]').click();
+    cy.wait(1500);
+    cy.get('input[name="filtro-id"]').type(contexto_id.variavelTemporaria[0]);
   }
 
 }
