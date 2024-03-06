@@ -15,8 +15,8 @@ Cenário: Cadastro de Tipo de Pessoa Simples
     E clico no botão 'Salvar'
     E aguardo o status 'Salvo com sucesso'
     Então o Cadastro de Tipo de Pessoa Simples deve ser salva com os seguintes dados:
-     | Descricao           |
-     | Tipo Pessoa teste   |
+    | Id        | Descricao         |
+    | Generator | Tipo Pessoa teste |
   
 
   

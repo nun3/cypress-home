@@ -1,4 +1,4 @@
-import { Given, When, Then, DataTable } from 'cypress-cucumber-preprocessor/steps';
+import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
 import { TipoPessoaAction } from '../Actions/TipoPessoasAction';
 
 const TipoPessoaAct = new TipoPessoaAction

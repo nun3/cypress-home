@@ -40,3 +40,26 @@ Cypress.Commands.add('clickMenu', (menu) => {
     cy.wait(500); 
   });
   
+  Cypress.Commands.add('ValidaId', (table, MapId, ColunaId) => {
+    table.hashes().forEach(row => {
+      cy.get(MapId)
+      .should('be.visible')
+      .then($element => {
+      const elementoValue = $element.text();
+        if (row[ColunaId]  === 'Generator') {
+          row[ColunaId]  = elementoValue;
+        }
+          return expect(elementoValue).to.equal(row[ColunaId]);
+      });
+  
+    });
+  });
+
+  Cypress.Commands.add('ValidaFields', (table, Mapfield, Coluna) => {
+    table.hashes().forEach(row => {
+      cy.get(Mapfield)
+      .should('be.visible')
+      .should('have.value', row[Coluna]);
+    });
+  });
+  

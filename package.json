@@ -18,5 +18,8 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
     "step_definitions": "cypress/Scripts/**"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
   }
 }

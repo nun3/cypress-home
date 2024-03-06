@@ -17,14 +17,11 @@ export class TipoPessoaAction {
     cy.get(TipoPessoaElement.TipoPessoaLocators.status)
     .contains(status,{timeout:3000})
   }
-
-  ValidaCadastroAtualizado(table){
-    table.hashes().forEach(row => {
-     cy.get(TipoPessoaElement.TipoPessoaLocators.Descricaofield)
-     .should('be.visible')
-     .should('have.value', row.Descricao)
-    
-    });
+ 
+  ValidaCadastroAtualizado(table) {
+    let Id = 'Id', Descricao = 'Descricao';
+    cy.ValidaId(table,TipoPessoaElement.TipoPessoaLocators.IdPessoa,Id)
+    cy.ValidaFields(table,TipoPessoaElement.TipoPessoaLocators.Descricaofield,Descricao)
   }
 
 }
