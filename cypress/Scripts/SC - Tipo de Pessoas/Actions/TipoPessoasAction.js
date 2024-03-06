@@ -19,12 +19,12 @@ export class TipoPessoaAction {
   }
 
   ValidaCadastroAtualizado(table){
-
     table.hashes().forEach(row => {
-    cy.get(TipoPessoaElement.TipoPessoaLocators.Descricaofield)
-    .should('be.visible')
-    .contains(row.Descricao)
-  });
+     cy.get(TipoPessoaElement.TipoPessoaLocators.Descricaofield)
+     .should('be.visible')
+     .should('have.value', row.Descricao)
+    
+    });
   }
 
 }
