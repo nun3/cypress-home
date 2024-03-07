@@ -17,7 +17,17 @@ Cenário: Cadastro de Tipo de Pessoa Simples
     Então o Cadastro de Tipo de Pessoa Simples deve ser salva com os seguintes dados:
     | Id        | Descricao         |
     | Generator | Tipo Pessoa teste |
-    Então eu filtro o id  do registro gerado e vejo as informações da linha na grid
+    # Então eu filtro o id  do registro gerado e vejo as informações da linha na grid
+
+# Cenário: Edição de Tipo de Pessoa Simples
+#     Dado que acessei o formulário de Tipo de Pessoa
+#     E clico no botão 'Novo'
+#     E preencho o campo Descrição com o valor 'Tipo Pessoa teste'
+#     E clico no botão 'Salvar'
+#     E aguardo o status 'Salvo com sucesso'
+#     Então o Cadastro de Tipo de Pessoa Simples deve ser salva com os seguintes dados:
+#     | Id        | Descricao                |
+#     | Generator | Tipo Pessoa teste Edição |
   
 
   

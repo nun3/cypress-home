@@ -23,6 +23,8 @@ export class TipoPessoaAction {
     let Id = 'Id', Descricao = 'Descricao';
     cy.ValidaId(table,TipoPessoaElement.TipoPessoaLocators.IdPessoa,Id)
     cy.ValidaFields(table,TipoPessoaElement.TipoPessoaLocators.Descricaofield,Descricao)
+    cy.clickMenu('Home')
+    
   }
   ValidaGrid() {
     cy.wait(1500);

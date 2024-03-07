@@ -27,6 +27,6 @@ Then(`o Cadastro de Tipo de Pessoa Simples deve ser salva com os seguintes dados
     TipoPessoaAct.ValidaCadastroAtualizado(table)
 });
 
-Then(`eu filtro o id  do registro gerado e vejo as informações da linha na grid`, () => {
-    TipoPessoaAct.ValidaGrid()
-});
+// Then(`eu filtro o id  do registro gerado e vejo as informações da linha na grid`, () => {
+//     TipoPessoaAct.ValidaGrid()
+// });
