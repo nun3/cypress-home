@@ -40,28 +40,35 @@ Cypress.Commands.add('clickMenu', (menu) => {
     .click();
     cy.wait(500); 
   });
+
   
   Cypress.Commands.add('ValidaId', (table, MapId, ColunaId) => {
     table.hashes().forEach(row => {
       cy.get(MapId)
-      .should('be.visible')
-      .then($element => {
-      let CONTEXTO_ID = $element.text();
-      VariavelTemp.variavelTemporaria.push(CONTEXTO_ID)
-        if (row[ColunaId]  === 'Generator') {
-          row[ColunaId]  = CONTEXTO_ID;
-        }
-          return expect(CONTEXTO_ID).to.equal(row[ColunaId]);
-      });
-      
+        .should('be.visible')
+        .then($element => {
+          let CONTEXTO_ID = $element.text();
+          if (row[ColunaId] === 'Generator') {
+            row[ColunaId] = CONTEXTO_ID;
+          }
+          expect(CONTEXTO_ID).to.equal(row[ColunaId]);
+          cy.wrap(CONTEXTO_ID).as('CONTEXTO_ID'); // Salva o valor em uma variável de alias
+        });
     });
   });
-
+  
   Cypress.Commands.add('ValidaFields', (table, Mapfield, Coluna) => {
     table.hashes().forEach(row => {
       cy.get(Mapfield)
-      .should('be.visible')
-      .should('have.value', row[Coluna]);
+        .should('be.visible')
+        .should('have.value', row[Coluna]);
     });
   });
+  
+  Cypress.Commands.add('exportToJSON', () => {
+    cy.get('@CONTEXTO_ID').then(CONTEXTO_ID => {
+      return cy.writeFile('cypress/Scripts/Commons/Temp.json', { variavelTemporaria: CONTEXTO_ID });
+    });
+  });
+  
   
